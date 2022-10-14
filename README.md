@@ -1,5 +1,5 @@
 # MyDreamApp
-Learning Angular 💪 https://www.udemy.com/course/the-complete-guide-to-angular-2/.
+Learning [Angular](https://www.udemy.com/course/the-complete-guide-to-angular-2/) 💪, instructor [Maximilian Schwarzmüller](https://github.com/maxschwarzmueller).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
