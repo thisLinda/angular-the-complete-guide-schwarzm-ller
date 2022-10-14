@@ -1,0 +1,23 @@
+1. server/servers components are static components
+
+2. Databinding
+
+a. databinding = communication, two way flow
+b. from typescript code (aka business logic) to the template (html): string interpolation {{ data }} and property binding [property] = "data"
+c. from template (user information i.e. clicks a button) to typescript: event binding (event) = "expression"
+d. two way binding: combination of both [(ngModel)] = "data"; react to events and output at the same time
+
+3. string interpolation, good for outputting data in a template
+
+a. in the html file add what is to be presented to the user
+b. in the ts file add, for example, serverId and status
+c. back in html reference the property {{ serverId }}
+d. can add any expression which can be resolved to a string (which means a method --getServerStatus()--could be called as long as it returns a string), does not allow multi-line or block expressions (no ifs or fors BUT can do ternary!); example: instead of `Server with ID {{ serverId }}` could write {{ 'Server' }} with ID {{ serverId }} is {{ serverStatus }}`, works for numbers too because they can easily be converted into a string
+
+4. property binding (some overlap in property binding and databinding), can interact with the dom and change things at runtime, can interact with directives and with own components; if you want to output/print text use string interpolation, change property use property binding
+
+a. adding `allowNewServer = false` (in the export class prevents the user from creating a new server, for instance when clicking a button)
+b. when the button was added it was clickable, adding disabled property to it hard-coded disable, writing a function with a timeout which then disables the button and adding square brackets around disabled directly binds the native property to the html element [disabled]
+
+<button class="btn btn-primary" 
+    [disabled]="!allowNewServer">Add Property Binding :)</button>
