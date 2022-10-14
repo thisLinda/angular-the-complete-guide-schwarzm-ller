@@ -1,3 +1,5 @@
+https://angular.io/guide/styleguide
+
 1. server/servers components are static components
 
 2. Databinding
@@ -14,10 +16,28 @@ b. in the ts file add, for example, serverId and status
 c. back in html reference the property {{ serverId }}
 d. can add any expression which can be resolved to a string (which means a method --getServerStatus()--could be called as long as it returns a string), does not allow multi-line or block expressions (no ifs or fors BUT can do ternary!); example: instead of `Server with ID {{ serverId }}` could write {{ 'Server' }} with ID {{ serverId }} is {{ serverStatus }}`, works for numbers too because they can easily be converted into a string
 
-4. property binding (some overlap in property binding and databinding), can interact with the dom and change things at runtime, can interact with directives and with own components; if you want to output/print text use string interpolation, change property use property binding
+4. property binding (some overlap in property binding and databinding), one way databinding; can interact with the dom and change things at runtime, can interact with directives and with own components; if you want to output/print text use string interpolation, change property use property binding
 
 a. adding `allowNewServer = false` (in the export class prevents the user from creating a new server, for instance when clicking a button)
 b. when the button was added it was clickable, adding disabled property to it hard-coded disable, writing a function with a timeout which then disables the button and adding square brackets around disabled directly binds the native property to the html element [disabled]
 
 <button class="btn btn-primary" 
     [disabled]="!allowNewServer">Add Property Binding :)</button>
+
+Don't mix property binding and string interpolation!
+
+4. Event Binding: one way databinding; use parenthesis, event name inside, and between quotes the code to be executed
+
+Can bind to (basically) all properties and events, console.log to check; for events don't bind to onclick (bind to (click))
+
+(click)="onCreateServer()"
+
+a. $event object, will capture the data associated with the input in quotes (i.e. above onCreateServer)
+
+5. *Two Way Binding*: (Preferred) Need to enable ngModel directive by adding FormsModule to imports[] in AppModule AND add import { FormsModule } from '@angular/forms' in app.module.ts; should be done automatically in cli version
+
+Binding in both directions and reacting to changes
+
+6. Combine all Databinding: the component demonstrates...
+
+Using all 4 forms of data binding together with each other, event biding to listen for the click, string interpolation to output the data, property binding to enable the button after 2 seconds, and 2 way binding to fetch the input data

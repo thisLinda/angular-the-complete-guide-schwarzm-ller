@@ -8,6 +8,9 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
+import { TwoWayComponent } from './two-way/two-way.component';
+import { CombineDatabindingComponent } from './combine-databinding/combine-databinding.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
     ServerComponent,
     ServersComponent,
     StringInterpolationComponent,
-    PropertyBindingComponent
+    PropertyBindingComponent,
+    EventBindingComponent,
+    TwoWayComponent,
+    CombineDatabindingComponent
   ],
   imports: [
     BrowserModule,

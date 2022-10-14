@@ -1,9 +1,13 @@
-<button class="btn btn-primary" 
+<button 
+    class="btn btn-primary" 
     [disabled]="!allowNewServer">Add Property Binding :)</button>
 <!-- putting disabled on the button hard codes it, instead set a timeout -->
 
+<!-- neither below are working, should be able to generate false, but always true -->
+
 <!-- output current value of allowNewServer, data binding -->
-<p [innerText]="allowNewServer"></p>
+<!-- <p [innerText]="allowNewServer"></p> -->
 
 <!-- output current value of allowNewServer, string interpolation -->
-<p>{{ allowNewServer }}</p>
+
+<!-- <p>{{ allowNewServer }}</p> -->
