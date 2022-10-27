@@ -1,7 +1,13 @@
 # MyDreamApp
 Learning [Angular](https://www.udemy.com/course/the-complete-guide-to-angular-2/) 💪, instructor [Maximilian Schwarzmüller](https://github.com/maxschwarzmueller).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
+## Debugging
+I had the "argument of type 'number' is not assignable to parameter of type 'never'" error in the Directives Assignment. The solution to set strict mode to false did not work for me, using Angular CLI version 14.2.5. After searching google I found a solution so the code ran as expected by accurately declaring the empty array:
+
+`log = []` // do not use
+
+`log: Array<number> = []` // use
+
 
 ## Development server
 

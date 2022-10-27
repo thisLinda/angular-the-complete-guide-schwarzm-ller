@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directives-assignment.component.css']
 })
 export class DirectivesAssignmentComponent implements OnInit {
+  showSecret = false
+  log: Array<number> = []
+
+  onToggleDetails() {
+    this.showSecret = !this.showSecret
+    this.log.push(this.log.length + 1)
+  }
 
   constructor() { }
 

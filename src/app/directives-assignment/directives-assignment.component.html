@@ -1,1 +1,21 @@
-<p>directives-assignment works!</p>
+<!-- 1. add a button which says "toggle details" -->
+<!-- 2. add a paragraph with any content of your choice -->
+<!-- 3. toggle the displaying of that paragraph with the button created in the first step -->
+<!-- 4. log all button clicks in an array and output that array below the secret paragraph -->
+<!-- 5. starting at the 5th log item, give all future log items a blue background (using ngStyle) and white color (using ngClass) -->
+<h1>Directives Assignment</h1>
+<div class="container">
+    <div class="row">
+        <div class="col=xs-12">
+            <!-- demo easy toggle -->
+            <!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">Toggle Details</button> -->
+            <button class="btn btn-primary" (click)="onToggleDetails()">Toggle Details</button>
+            <p *ngIf="showSecret">Secret Password = aria </p>
+            <div
+                *ngFor="let logItem of log"
+                [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+                    [ngClass]="{'white-text' : logItem >= 5}"
+            >{{ logItem }}</div>
+        </div>
+    </div>
+</div>
