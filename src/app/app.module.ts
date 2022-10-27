@@ -11,6 +11,10 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayComponent } from './two-way/two-way.component';
 import { CombineDatabindingComponent } from './combine-databinding/combine-databinding.component';
+import { DatabindingAssignmentComponent } from './databinding-assignment/databinding-assignment.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
+import { DirectivesAssignmentComponent } from './directives-assignment/directives-assignment.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { CombineDatabindingComponent } from './combine-databinding/combine-datab
     PropertyBindingComponent,
     EventBindingComponent,
     TwoWayComponent,
-    CombineDatabindingComponent
+    CombineDatabindingComponent,
+    DatabindingAssignmentComponent,
+    DirectivesComponent,
+    AttributeDirectivesComponent,
+    DirectivesAssignmentComponent
   ],
   imports: [
     BrowserModule,

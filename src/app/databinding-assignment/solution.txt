@@ -1,0 +1,25 @@
+1. HTML: add input field label, optional input type which receives a class; add styling if desired (bootstrap, div.container, div.row, div.column class); add 2 way binding with square bracket then parenthesis notation [(ngModel)] and bind to username with = (make sure FormsModule is added to import in ts, should be automatically):
+    <label>User Name</label>
+    <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="userName">
+
+2. TS: bind the username/input to a property of ts file, add property to AppComponent, set to empty string (for username), note-this is the instruction, I did the assignment differently with many separate components:
+    export class AppComponent {
+        username = '';
+    }
+
+3. HTML: to see username updated on every keystroke, below <input> add a <p> and {{}} to output username:
+    <p>{{ userName }}</p>
+
+4. HTML: add button below <p>, receives bootstrap class, need to disable if username is empty by binding to disabled (there are other methods, this is the one taught here), could be set directly to a property, or set directly to true or false, or--as taught in the course--whatever is between the quotation marks can be an expression which resolves to true/false:
+    <button
+    class="btn btn-success" 
+    [disabled]="userName === ''"
+    (click)="userName = ''">Reset User</button>
+
+Demonstrates how we can use property binding with any expression which returns a value property binding to expects.
+
+5. HTML: add a click listener to reset the button, reset by assigning with = to empty string:
+    (click)="userName = ''">Reset User</button>

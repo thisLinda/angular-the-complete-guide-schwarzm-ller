@@ -41,3 +41,13 @@ Binding in both directions and reacting to changes
 6. Combine all Databinding: the component demonstrates...
 
 Using all 4 forms of data binding together with each other, event biding to listen for the click, string interpolation to output the data, property binding to enable the button after 2 seconds, and 2 way binding to fetch the input data
+
+7. See separate txt file for databinding assignment solutions steps
+
+8. Structural Directives. Identified by use of "decorator" (similar to spring annotation) @Directive, can be built-in or custom. Instructions in the DOM, when the selector of the component placed in template is an instruction to angular to add the content of the component template/business logic into the place we are using the selector (our instruction --> a directive). 
+
+    Custom: Directive without a template `appTurnGreen` custom (<p appTurnGreen>Receives a green background</p>), which is defined in @Directive({ selector: '[appTurnGreen]}) export class TurnGreenDirective {} (logic which defines)
+
+    Built-in: structural directive signified with an asterisk, provides extra information for the DOM/changes the dom; can use *ngIf to conditionally return a message; # indicates local reference for else;
+
+9. Attribute Directives. Don't add or remove elements (like structural), only change the element they were placed on. Example is style which can update dynamically when used on an element.

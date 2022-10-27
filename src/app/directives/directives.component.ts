@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-two-way',
-  templateUrl: './two-way.component.html',
+  selector: 'app-directives',
+  templateUrl: './directives.component.html',
 })
-export class TwoWayComponent implements OnInit {
 
+export class DirectivesComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = "No server was created"
-  serverName = ''
+  serverName = 'Testserver'
+  serverCreated = false
 
   constructor() {
     setTimeout(() => {
@@ -20,7 +21,8 @@ export class TwoWayComponent implements OnInit {
   }
 
   onCreateServer() {
-    this.serverCreationStatus = "Server was created!"
+    this.serverCreated = true
+    this.serverCreationStatus = "Server was created! Name is " + this.serverName
   }
 
   onUpdateServerName(event: Event) {

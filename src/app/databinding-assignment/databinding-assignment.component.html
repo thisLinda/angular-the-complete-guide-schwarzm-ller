@@ -1,0 +1,24 @@
+<!-- Remember, bootstrap styling (row, column) is located in app.component.html -->
+<!-- add an input field which updates a property ('username') via two way binding -->
+<h1>Databinding Assignment</h1>
+<label>User Name</label>
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)]="userName">
+
+<!--  output the username property via string interpolation in a paragraph below the input -->
+<p>{{ userName }}</p>
+
+<!-- add a button which may only be clicked if the username is not an empty string -->
+<button
+    class="btn btn-success" 
+    [disabled]="userName === ''"
+    (click)="userName = ''">Reset User</button>
+<p></p>
+
+<!-- <button
+    class="btn btn-success" 
+    [disabled]="!createNewUser"
+    (click)="onCreateUser()">Reset User</button>
+<p>{{ userNameCreationStatus }}</p> -->
